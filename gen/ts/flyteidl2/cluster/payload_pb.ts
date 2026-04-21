@@ -7,7 +7,7 @@ import { enumDesc, fileDesc, messageDesc } from "@bufbuild/protobuf/codegenv1";
 import { file_buf_validate_validate } from "../../buf/validate/validate_pb.ts";
 import type { Identifier } from "../app/app_definition_pb.ts";
 import { file_flyteidl2_app_app_definition } from "../app/app_definition_pb.ts";
-import type { ActionAttemptIdentifier, ActionIdentifier, OrgIdentifier, ProjectIdentifier } from "../common/identifier_pb.ts";
+import type { ActionAttemptIdentifier, ActionIdentifier, DomainIdentifier, OrgIdentifier, ProjectIdentifier } from "../common/identifier_pb.ts";
 import { file_flyteidl2_common_identifier } from "../common/identifier_pb.ts";
 import type { TaskIdentifier } from "../task/task_definition_pb.ts";
 import { file_flyteidl2_task_task_definition } from "../task/task_definition_pb.ts";
@@ -17,7 +17,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file flyteidl2/cluster/payload.proto.
  */
 export const file_flyteidl2_cluster_payload: GenFile = /*@__PURE__*/
-  fileDesc("Ch9mbHl0ZWlkbDIvY2x1c3Rlci9wYXlsb2FkLnByb3RvEhFmbHl0ZWlkbDIuY2x1c3RlciL4BQoUU2VsZWN0Q2x1c3RlclJlcXVlc3QSMQoGb3JnX2lkGAEgASgLMh8uZmx5dGVpZGwyLmNvbW1vbi5PcmdJZGVudGlmaWVySAASOQoKcHJvamVjdF9pZBgCIAEoCzIjLmZseXRlaWRsMi5jb21tb24uUHJvamVjdElkZW50aWZpZXJIABIxCgd0YXNrX2lkGAMgASgLMh4uZmx5dGVpZGwyLnRhc2suVGFza0lkZW50aWZpZXJIABI3CglhY3Rpb25faWQYBCABKAsyIi5mbHl0ZWlkbDIuY29tbW9uLkFjdGlvbklkZW50aWZpZXJIABJGChFhY3Rpb25fYXR0ZW1wdF9pZBgFIAEoCzIpLmZseXRlaWRsMi5jb21tb24uQWN0aW9uQXR0ZW1wdElkZW50aWZpZXJIABIrCgZhcHBfaWQYBiABKAsyGS5mbHl0ZWlkbDIuYXBwLklkZW50aWZpZXJIABJOCglvcGVyYXRpb24YCCABKA4yMS5mbHl0ZWlkbDIuY2x1c3Rlci5TZWxlY3RDbHVzdGVyUmVxdWVzdC5PcGVyYXRpb25CCLpIBYIBAiAAIq0CCglPcGVyYXRpb24SGQoVT1BFUkFUSU9OX1VOU1BFQ0lGSUVEEAASJAogT1BFUkFUSU9OX0NSRUFURV9VUExPQURfTE9DQVRJT04QARIbChdPUEVSQVRJT05fVVBMT0FEX0lOUFVUUxACEh0KGU9QRVJBVElPTl9HRVRfQUNUSU9OX0RBVEEQAxIhCh1PUEVSQVRJT05fUVVFUllfUkFOR0VfTUVUUklDUxAEEiIKHk9QRVJBVElPTl9DUkVBVEVfRE9XTkxPQURfTElOSxAFEhcKE09QRVJBVElPTl9UQUlMX0xPR1MQBhIoCiRPUEVSQVRJT05fR0VUX0FDVElPTl9BVFRFTVBUX01FVFJJQ1MQBxIZChVPUEVSQVRJT05fVVNFX1NFQ1JFVFMQCUIRCghyZXNvdXJjZRIFukgCCAEiMQoVU2VsZWN0Q2x1c3RlclJlc3BvbnNlEhgKEGNsdXN0ZXJfZW5kcG9pbnQYASABKAlCwwEKFWNvbS5mbHl0ZWlkbDIuY2x1c3RlckIMUGF5bG9hZFByb3RvSAJQAVo1Z2l0aHViLmNvbS9mbHl0ZW9yZy9mbHl0ZS92Mi9nZW4vZ28vZmx5dGVpZGwyL2NsdXN0ZXKiAgNGQ1iqAhFGbHl0ZWlkbDIuQ2x1c3RlcsoCEUZseXRlaWRsMlxDbHVzdGVy4gIdRmx5dGVpZGwyXENsdXN0ZXJcR1BCTWV0YWRhdGHqAhJGbHl0ZWlkbDI6OkNsdXN0ZXJiBnByb3RvMw", [file_buf_validate_validate, file_flyteidl2_app_app_definition, file_flyteidl2_common_identifier, file_flyteidl2_task_task_definition]);
+  fileDesc("Ch9mbHl0ZWlkbDIvY2x1c3Rlci9wYXlsb2FkLnByb3RvEhFmbHl0ZWlkbDIuY2x1c3RlciKxBgoUU2VsZWN0Q2x1c3RlclJlcXVlc3QSMQoGb3JnX2lkGAEgASgLMh8uZmx5dGVpZGwyLmNvbW1vbi5PcmdJZGVudGlmaWVySAASOQoKcHJvamVjdF9pZBgCIAEoCzIjLmZseXRlaWRsMi5jb21tb24uUHJvamVjdElkZW50aWZpZXJIABIxCgd0YXNrX2lkGAMgASgLMh4uZmx5dGVpZGwyLnRhc2suVGFza0lkZW50aWZpZXJIABI3CglhY3Rpb25faWQYBCABKAsyIi5mbHl0ZWlkbDIuY29tbW9uLkFjdGlvbklkZW50aWZpZXJIABJGChFhY3Rpb25fYXR0ZW1wdF9pZBgFIAEoCzIpLmZseXRlaWRsMi5jb21tb24uQWN0aW9uQXR0ZW1wdElkZW50aWZpZXJIABIrCgZhcHBfaWQYBiABKAsyGS5mbHl0ZWlkbDIuYXBwLklkZW50aWZpZXJIABI3Cglkb21haW5faWQYCSABKAsyIi5mbHl0ZWlkbDIuY29tbW9uLkRvbWFpbklkZW50aWZpZXJIABJOCglvcGVyYXRpb24YCCABKA4yMS5mbHl0ZWlkbDIuY2x1c3Rlci5TZWxlY3RDbHVzdGVyUmVxdWVzdC5PcGVyYXRpb25CCLpIBYIBAiAAIq0CCglPcGVyYXRpb24SGQoVT1BFUkFUSU9OX1VOU1BFQ0lGSUVEEAASJAogT1BFUkFUSU9OX0NSRUFURV9VUExPQURfTE9DQVRJT04QARIbChdPUEVSQVRJT05fVVBMT0FEX0lOUFVUUxACEh0KGU9QRVJBVElPTl9HRVRfQUNUSU9OX0RBVEEQAxIhCh1PUEVSQVRJT05fUVVFUllfUkFOR0VfTUVUUklDUxAEEiIKHk9QRVJBVElPTl9DUkVBVEVfRE9XTkxPQURfTElOSxAFEhcKE09QRVJBVElPTl9UQUlMX0xPR1MQBhIoCiRPUEVSQVRJT05fR0VUX0FDVElPTl9BVFRFTVBUX01FVFJJQ1MQBxIZChVPUEVSQVRJT05fVVNFX1NFQ1JFVFMQCkIRCghyZXNvdXJjZRIFukgCCAEiMQoVU2VsZWN0Q2x1c3RlclJlc3BvbnNlEhgKEGNsdXN0ZXJfZW5kcG9pbnQYASABKAlCwwEKFWNvbS5mbHl0ZWlkbDIuY2x1c3RlckIMUGF5bG9hZFByb3RvSAJQAVo1Z2l0aHViLmNvbS9mbHl0ZW9yZy9mbHl0ZS92Mi9nZW4vZ28vZmx5dGVpZGwyL2NsdXN0ZXKiAgNGQ1iqAhFGbHl0ZWlkbDIuQ2x1c3RlcsoCEUZseXRlaWRsMlxDbHVzdGVy4gIdRmx5dGVpZGwyXENsdXN0ZXJcR1BCTWV0YWRhdGHqAhJGbHl0ZWlkbDI6OkNsdXN0ZXJiBnByb3RvMw", [file_buf_validate_validate, file_flyteidl2_app_app_definition, file_flyteidl2_common_identifier, file_flyteidl2_task_task_definition]);
 
 /**
  * @generated from message flyteidl2.cluster.SelectClusterRequest
@@ -62,6 +62,12 @@ export type SelectClusterRequest = Message<"flyteidl2.cluster.SelectClusterReque
      */
     value: Identifier;
     case: "appId";
+  } | {
+    /**
+     * @generated from field: flyteidl2.common.DomainIdentifier domain_id = 9;
+     */
+    value: DomainIdentifier;
+    case: "domainId";
   } | { case: undefined; value?: undefined };
 
   /**
@@ -122,9 +128,9 @@ export enum SelectClusterRequest_Operation {
   GET_ACTION_ATTEMPT_METRICS = 7,
 
   /**
-   * @generated from enum value: OPERATION_USE_SECRETS = 9;
+   * @generated from enum value: OPERATION_USE_SECRETS = 10;
    */
-  USE_SECRETS = 9,
+  USE_SECRETS = 10,
 }
 
 /**
