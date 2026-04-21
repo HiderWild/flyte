@@ -29,8 +29,7 @@ message SelectClusterRequest {
     OPERATION_CREATE_DOWNLOAD_LINK = 5;
     OPERATION_TAIL_LOGS = 6;
     OPERATION_GET_ACTION_ATTEMPT_METRICS = 7;
-    OPERATION_EDIT_SECRETS = 9;
-    OPERATION_READ_SECRETS = 10;
+    OPERATION_USE_SECRETS = 9;
   }
 
   Operation operation = 8 [(buf.validate.field).enum = {
